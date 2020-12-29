@@ -18,17 +18,26 @@ plot_var_int(transf_md)
 #проверка гипотез, хотя на 5-ти точках это смешно делать...
 
 t.test(baseline, chemb, alternative = "less", var.equal = FALSE)$p.value
+ks.test(baseline, chemb)$p.value
 
 t.test(baseline, chemb_md, alternative = "less", var.equal = FALSE)$p.value
+ks.test(baseline, chemb_md)$p.value
 
 t.test(baseline, transf, alternative = "less", var.equal = FALSE)$p.value
+ks.test(baseline, transf)$p.value
 
 t.test(baseline, transf_md, alternative = "less", var.equal = FALSE)$p.value
+ks.test(baseline, transf_md)$p.value
 
 t.test(chemb, chemb_md, alternative = "less", var.equal = FALSE)$p.value
+ks.test(chemb, chemb_md)$p.value
 
 t.test(transf, transf_md, alternative = "less", var.equal = FALSE)$p.value
+ks.test(transf, transf_md)$p.value
 
 t.test(transf, chemb, alternative = "less", var.equal = FALSE)$p.value
+ks.test(transf, chemb)$p.value
 
 t.test(transf_md, chemb_md, alternative = "less", var.equal = FALSE)$p.value
+ks.test(transf_md, chemb_md)$p.value
+
